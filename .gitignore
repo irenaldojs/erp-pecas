@@ -1,0 +1,39 @@
+# Dependências
+node_modules/
+.pnpm-store/
+
+# Builds
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# Turborepo
+.turbo/
+
+# Variáveis de ambiente (mantenha só os .example)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# PWA / dev
+dev-dist/
+coverage/
+
+# Docker / dados locais
+pgdata/
+*.sqlite
+*.db
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
