@@ -27,7 +27,8 @@ export async function catalogoRoutes(app: FastifyInstance) {
           q ? or(ilike(pecas.codigo, `%${q}%`), ilike(pecas.descricao, `%${q}%`)) : undefined,
         ),
       )
-      .limit(100)
+      .orderBy(pecas.updatedAt)
+      .limit(updatedSince ? 500 : 100)
   })
 
   app.post('/pecas', async (req, reply) => {

@@ -29,4 +29,12 @@ export default defineConfig({
     }),
     react(),
   ],
+  server:{
+     proxy: {
+    '/api': {
+      target: 'http://localhost:3000',
+      rewrite: (p) => p.replace(/^\/api/, ''),
+    },
+   },
+  }
 })
